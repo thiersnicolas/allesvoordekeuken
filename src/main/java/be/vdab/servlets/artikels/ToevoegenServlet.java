@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import be.vdab.entities.Artikel;
-import be.vdab.services.ArtikelServices;
+import be.vdab.services.ArtikelService;
 import be.vdab.util.StringUtils;
 
 /**
@@ -23,7 +23,7 @@ public class ToevoegenServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final String VIEW = "/WEB-INF/JSP/artikels/toevoegen.jsp";
 	private static final String REDIRECT_URL = "%s/artikels/zoekenopnummer.htm?id=%d";
-	private final ArtikelServices artikelServices = new ArtikelServices();
+	private final ArtikelService artikelServices = new ArtikelService();
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

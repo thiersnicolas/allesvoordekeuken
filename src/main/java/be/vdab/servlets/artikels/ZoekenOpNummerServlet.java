@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import be.vdab.services.ArtikelServices;
+import be.vdab.services.ArtikelService;
 import be.vdab.util.StringUtils;
 
 /**
@@ -19,7 +19,7 @@ import be.vdab.util.StringUtils;
 public class ZoekenOpNummerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final String VIEW = "/WEB-INF/JSP/artikels/zoeken.jsp";
-	private final transient ArtikelServices artikelServices = new ArtikelServices();
+	private final transient ArtikelService artikelServices = new ArtikelService();
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
