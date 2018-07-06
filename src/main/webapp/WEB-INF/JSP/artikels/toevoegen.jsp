@@ -37,15 +37,17 @@
 	</form>
 </body>
 <script>
-	document.getElementById('food').onclick = enableDisableInputs();
-	document.getElementById('nonfood').onclick = enableDisableInputs();
+	document.getElementById('food').addEventListener('click', function(){enableDisableInputs()});
+	document.getElementById('nonfood').addEventListener('click', function(){enableDisableInputs()});
 	enableDisableInputs();
 	function enableDisableInputs() {
-		if (document.getElementById('food').checked == true) {
-			document.getElementById('garantie').disabled = true;
+		if (document.getElementById('food').checked) {
+			document.getElementById('garantie').setAttribute("disabled", true);
+			document.getElementById('houdbaarheid').disabled = false;
 		}
-		if (document.getElementById('nonfood').checked == true) {
+		if (document.getElementById('nonfood').checked) {
 			document.getElementById('houdbaarheid').disabled = true;
+			document.getElementById('garantie').disabled = false;
 		}
 	}
 </script>
